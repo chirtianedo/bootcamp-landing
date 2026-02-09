@@ -69,7 +69,7 @@ export default function Hero() {
                 className="relative group cursor-pointer rounded-2xl overflow-hidden shadow-2xl hover:shadow-primary-500/30 transition-all duration-300"
               >
                 <img
-                  src="https://img.youtube.com/vi/5uectNqI9CY/maxresdefault.jpg"
+                  src="https://vumbnail.com/1163352497.jpg"
                   alt="Watch Video"
                   className="w-full h-auto group-hover:scale-105 transition-transform duration-300"
                 />
@@ -89,10 +89,10 @@ export default function Hero() {
                 <iframe
                   width="100%"
                   height="100%"
-                  src="https://www.youtube.com/embed/5uectNqI9CY?autoplay=1"
+                  src="https://player.vimeo.com/video/1163352497?autoplay=1&title=0&byline=0&portrait=0"
                   title="Global Income Bootcamp"
                   frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allow="autoplay; fullscreen; picture-in-picture"
                   allowFullScreen
                   className="w-full h-full"
                 ></iframe>
