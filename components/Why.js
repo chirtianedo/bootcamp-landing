@@ -92,16 +92,16 @@ export default function Why() {
                 Why Should You Listen To Me?
               </h3>
               <p className="text-xl text-gray-200 mb-4 leading-relaxed">
-                My name is <span className="text-primary-400 font-semibold">Praise Akinlami</span>. I'm a global income earner.
+                My name is <span className="text-primary-400 font-semibold">Praise Akinlami</span>. I&apos;m a global income earner.
               </p>
               <p className="text-lg text-gray-300 leading-relaxed mb-4">
                 In 2020, I lived in a flooded apartment. That experience changed how I saw my life. I decided I was done struggling and made a clear choice to do better.
               </p>
               <p className="text-lg text-gray-300 leading-relaxed mb-4">
-                Today, I've made close to <span className="text-primary-400 font-semibold">₦1 billion online</span> and trained over <span className="text-primary-400 font-semibold">6,000 people</span>. Hundreds of them are now millionaires through the skills and systems I teach.
+                Today, I&apos;ve made close to <span className="text-primary-400 font-semibold">₦1 billion online</span> and trained over <span className="text-primary-400 font-semibold">6,000 people</span>. Hundreds of them are now millionaires through the skills and systems I teach.
               </p>
               <p className="text-lg text-gray-300 leading-relaxed mb-4">
-                I've built a community of over <span className="text-primary-400 font-semibold">300,000 people</span> across social media and I earn from anywhere in the world. Most importantly, I live life on my own terms.
+                I&apos;ve built a community of over <span className="text-primary-400 font-semibold">300,000 people</span> across social media and I earn from anywhere in the world. Most importantly, I live life on my own terms.
               </p>
               <p className="text-lg text-white font-semibold leading-relaxed">
                 My story is proof that where you start does not have to limit where you end up.

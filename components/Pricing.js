@@ -114,8 +114,8 @@ export default function Pricing() {
                 100% Money-Back Guarantee
               </h4>
               <p className="text-sm text-gray-300">
-                Come to Day 1, attend the sessions, and if you genuinely feel this isn't what you expected, 
-                tell my team before the end of Day 1, and we'll refund your ticket. No stress.
+                Come to Day 1, attend the sessions, and if you genuinely feel this isn&apos;t what you expected, 
+                tell my team before the end of Day 1, and we&apos;ll refund your ticket. No stress.
               </p>
             </div>
 
@@ -136,7 +136,7 @@ export default function Pricing() {
               <>
                 <h3 className="text-3xl font-bold mb-6 text-white">Register Now</h3>
                 <p className="text-gray-300 mb-8">
-                  Fill out the form below to secure your seat. You'll receive payment instructions 
+                  Fill out the form below to secure your seat. You&apos;ll receive payment instructions 
                   and be added to the WhatsApp group.
                 </p>
 
@@ -229,7 +229,7 @@ export default function Pricing() {
                 </div>
                 <h3 className="text-3xl font-bold mb-4 text-white">Registration Successful!</h3>
                 <p className="text-gray-300 mb-6">
-                  Thank you for registering. You'll receive payment instructions and 
+                  Thank you for registering. You&apos;ll receive payment instructions and 
                   WhatsApp group details via email shortly.
                 </p>
                 <button

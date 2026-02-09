@@ -89,7 +89,7 @@ export default function Testimonials() {
             <span className="text-white">From Real People</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            These people are <span className="text-white font-bold">not different from you</span>. They just know something you don't.
+            These people are <span className="text-white font-bold">not different from you</span>. They just know something you don&apos;t.
           </p>
         </motion.div>
 
