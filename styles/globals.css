@@ -59,7 +59,7 @@
   }
 
   .glow-effect {
-    box-shadow: 0 0 30px rgba(205, 255, 51, 0.4);
+    box-shadow: 0 0 30px rgba(16, 185, 129, 0.4);
   }
   
   /* Input focus animations */
@@ -69,10 +69,10 @@
   
   @keyframes input-glow {
     0% {
-      box-shadow: 0 0 0 0 rgba(205, 255, 51, 0.5);
+      box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.5);
     }
     100% {
-      box-shadow: 0 0 0 4px rgba(205, 255, 51, 0.15);
+      box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.15);
     }
   }
   
