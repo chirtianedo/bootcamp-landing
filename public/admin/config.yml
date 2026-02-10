@@ -12,7 +12,7 @@ collections:
     files:
       - label: "Site Settings"
         name: "site"
-        file: "content/settings.json"
+        file: "public/content/settings.json"
         fields:
           - { label: "Site Title", name: "title", widget: "string" }
           - { label: "WhatsApp Number", name: "whatsapp", widget: "string" }
@@ -23,7 +23,7 @@ collections:
     files:
       - label: "Home Page - Hero"
         name: "hero"
-        file: "content/hero.json"
+        file: "public/content/hero.json"
         fields:
           - { label: "Logo", name: "logo", widget: "image" }
           - { label: "Main Headline Line 1", name: "headline1", widget: "string" }
@@ -43,7 +43,7 @@ collections:
 
       - label: "About Section"
         name: "about"
-        file: "content/about.json"
+        file: "public/content/about.json"
         fields:
           - { label: "Section Headline", name: "headline", widget: "string" }
           - { label: "Section Description", name: "description", widget: "text" }
@@ -59,7 +59,7 @@ collections:
 
       - label: "Why This Works"
         name: "why"
-        file: "content/why.json"
+        file: "public/content/why.json"
         fields:
           - { label: "Section Headline", name: "headline", widget: "string" }
           - label: "Features"
@@ -75,7 +75,7 @@ collections:
 
       - label: "Bootcamp Content"
         name: "bootcamp"
-        file: "content/bootcamp.json"
+        file: "public/content/bootcamp.json"
         fields:
           - { label: "Section Headline", name: "headline", widget: "string" }
           - { label: "Section Description", name: "description", widget: "text" }
@@ -118,7 +118,7 @@ collections:
 
       - label: "Testimonials"
         name: "testimonials"
-        file: "content/testimonials.json"
+        file: "public/content/testimonials.json"
         fields:
           - { label: "Section Headline", name: "headline", widget: "string" }
           - { label: "Section Subheadline", name: "subheadline", widget: "text" }
@@ -134,7 +134,7 @@ collections:
 
       - label: "Pricing & Registration"
         name: "pricing"
-        file: "content/pricing.json"
+        file: "public/content/pricing.json"
         fields:
           - { label: "Section Headline", name: "headline", widget: "string" }
           - { label: "Section Description", name: "description", widget: "text" }
@@ -153,7 +153,7 @@ collections:
 
       - label: "FAQ"
         name: "faq"
-        file: "content/faq.json"
+        file: "public/content/faq.json"
         fields:
           - { label: "Section Headline", name: "headline", widget: "string" }
           - { label: "Section Description", name: "description", widget: "text" }
