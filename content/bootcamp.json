@@ -1,0 +1,68 @@
+{
+  "headline": "What Happens At The Bootcamp",
+  "description": "2 Days of practical systems, not theory. Physical event with hands-on training.",
+  "day1": {
+    "date": "February 14",
+    "theme": "Direction & Clarity",
+    "sections": [
+      {
+        "title": "The Global Income Map",
+        "items": [
+          "How money really moves online (why creators & traders struggle)",
+          "Which global companies pay, and why",
+          "The exact position \"global income earners\" occupy"
+        ]
+      },
+      {
+        "title": "Why Nigerians Lose Online",
+        "items": [
+          "The mindset traps",
+          "The misinformation problem",
+          "Why \"learning skills\" alone isn't enough",
+          "How to position yourself correctly from Nigeria"
+        ]
+      }
+    ]
+  },
+  "day2": {
+    "date": "February 15",
+    "theme": "Action Taking & Scaling",
+    "sections": [
+      {
+        "title": "Automation & Leverage with AI",
+        "items": [
+          "AI to replace manual work",
+          "Simple systems to run income on autopilot",
+          "Tools that work even if you have a job, school, or family"
+        ]
+      },
+      {
+        "title": "Make Money with AI",
+        "items": [
+          "Finding offers",
+          "Creating funnels",
+          "Handling follow-ups",
+          "Scaling income without hiring a big team"
+        ]
+      }
+    ]
+  },
+  "bonuses": [
+    {
+      "title": "Global Income Opportunity List",
+      "description": "Curated list of middleman opportunities paying ₦10m to ₦100m yearly without showing your face"
+    },
+    {
+      "title": "Businesses Under ₦200k",
+      "description": "Real examples and case studies you can start with minimal capital"
+    },
+    {
+      "title": "System Setup Blueprint",
+      "description": "One income engine + One traffic source + One automation flow (no overwhelm)"
+    },
+    {
+      "title": "Monetization & Scale Strategy",
+      "description": "Turn small wins into consistent income that compounds monthly"
+    }
+  ]
+}

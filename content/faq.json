@@ -1,0 +1,41 @@
+{
+  "headline": "Frequently Asked Questions",
+  "description": "Everything you need to know about the bootcamp",
+  "faqs": [
+    {
+      "question": "Do I need to be tech-savvy?",
+      "answer": "Not at all! The systems we teach are designed for anyone to follow. If you can use a smartphone, you can implement these strategies. We break everything down into simple, actionable steps."
+    },
+    {
+      "question": "Is this for beginners?",
+      "answer": "Yes! Whether you're completely new to online income or you've tried other things before, this bootcamp will give you the clarity and systems you need. We start from the fundamentals and build up."
+    },
+    {
+      "question": "Do I need to show my face online?",
+      "answer": "No! One of the key advantages of being a Global Income Earner is that you can operate behind the scenes. You don't need to be an influencer or show your face at all."
+    },
+    {
+      "question": "Is it only for Nigerians?",
+      "answer": "While the event is physically in Abuja, the strategies work globally. However, we specifically show how to position yourself from Nigeria to tap into global opportunities."
+    },
+    {
+      "question": "What happens after I pay?",
+      "answer": "You'll be added to the WhatsApp group where you'll receive all event updates, what to bring, venue details, and step-by-step instructions leading up to the bootcamp."
+    },
+    {
+      "question": "What if I can't make it to Abuja?",
+      "answer": "This is a physical-only event to ensure maximum value and hands-on learning. We don't offer virtual attendance for this bootcamp as the in-person experience is crucial."
+    },
+    {
+      "question": "How does the money-back guarantee work?",
+      "answer": "Attend Day 1 sessions. If you genuinely feel this isn't what you expected, inform our team before Day 1 ends, and we'll refund your ticket. Simple as that."
+    },
+    {
+      "question": "Do I need any capital to start?",
+      "answer": "Not necessarily. We'll show you opportunities that require minimal to no capital, as well as businesses you can start with ₦200,000 or less. The focus is on systems and positioning, not huge investments."
+    }
+  ],
+  "contactTitle": "Still have questions?",
+  "contactDescription": "Contact us via WhatsApp and we'll get back to you as soon as possible.",
+  "contactButton": "Contact Support"
+}

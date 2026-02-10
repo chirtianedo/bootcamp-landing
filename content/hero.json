@@ -1,0 +1,17 @@
+{
+  "logo": "/images/Global image logo.png",
+  "headline1": "Build a",
+  "headline2": "Global Income Engine",
+  "subheadline": "A 2-Day Physical Bootcamp That Shows You How to Earn Dollars Again and Again",
+  "subheadline2": "Without Products. Without Showing Your Face. Using AI and Your Phone.",
+  "videoThumbnail": "https://vumbnail.com/1163352497.jpg",
+  "videoUrl": "https://player.vimeo.com/video/1163352497",
+  "primaryButton": "Secure My Seat for ₦25,000",
+  "secondaryButton": "Learn More",
+  "stats": [
+    { "number": "6,000+", "label": "Students Trained" },
+    { "number": "1bn+", "label": "Generated Online" },
+    { "number": "100", "label": "Seats Only" },
+    { "number": "2 Days", "label": "Physical Event" }
+  ]
+}

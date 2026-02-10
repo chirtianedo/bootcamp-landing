@@ -1,0 +1,168 @@
+backend:
+  name: github
+  repo: chirtianedo/bootcamp-landing
+  branch: main
+
+media_folder: public/images
+public_folder: /images
+
+collections:
+  - name: "settings"
+    label: "Settings"
+    files:
+      - label: "Site Settings"
+        name: "site"
+        file: "content/settings.json"
+        fields:
+          - { label: "Site Title", name: "title", widget: "string" }
+          - { label: "WhatsApp Number", name: "whatsapp", widget: "string" }
+          - { label: "Registration Email", name: "email", widget: "string" }
+
+  - name: "pages"
+    label: "Pages"
+    files:
+      - label: "Home Page - Hero"
+        name: "hero"
+        file: "content/hero.json"
+        fields:
+          - { label: "Logo", name: "logo", widget: "image" }
+          - { label: "Main Headline Line 1", name: "headline1", widget: "string" }
+          - { label: "Main Headline Line 2 (Gradient)", name: "headline2", widget: "string" }
+          - { label: "Subheadline", name: "subheadline", widget: "text" }
+          - { label: "Subheadline 2", name: "subheadline2", widget: "text" }
+          - { label: "Video Thumbnail URL", name: "videoThumbnail", widget: "string" }
+          - { label: "Video URL (Vimeo)", name: "videoUrl", widget: "string" }
+          - { label: "Primary Button Text", name: "primaryButton", widget: "string" }
+          - { label: "Secondary Button Text", name: "secondaryButton", widget: "string" }
+          - label: "Stats"
+            name: "stats"
+            widget: "list"
+            fields:
+              - { label: "Number", name: "number", widget: "string" }
+              - { label: "Label", name: "label", widget: "string" }
+
+      - label: "About Section"
+        name: "about"
+        file: "content/about.json"
+        fields:
+          - { label: "Section Headline", name: "headline", widget: "string" }
+          - { label: "Section Description", name: "description", widget: "text" }
+          - label: "Problems (Red X)"
+            name: "problems"
+            widget: "list"
+            field: { label: "Problem", name: "problem", widget: "string" }
+          - label: "Solutions (Green Check)"
+            name: "solutions"
+            widget: "list"
+            field: { label: "Solution", name: "solution", widget: "string" }
+          - { label: "Bottom Text", name: "bottomText", widget: "text" }
+
+      - label: "Why This Works"
+        name: "why"
+        file: "content/why.json"
+        fields:
+          - { label: "Section Headline", name: "headline", widget: "string" }
+          - label: "Features"
+            name: "features"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+          - { label: "Profile Headline", name: "profileHeadline", widget: "string" }
+          - { label: "Profile Name", name: "profileName", widget: "string" }
+          - { label: "Profile Image", name: "profileImage", widget: "image" }
+          - { label: "Profile Bio", name: "profileBio", widget: "markdown" }
+
+      - label: "Bootcamp Content"
+        name: "bootcamp"
+        file: "content/bootcamp.json"
+        fields:
+          - { label: "Section Headline", name: "headline", widget: "string" }
+          - { label: "Section Description", name: "description", widget: "text" }
+          - label: "Day 1"
+            name: "day1"
+            widget: "object"
+            fields:
+              - { label: "Date", name: "date", widget: "string" }
+              - { label: "Theme", name: "theme", widget: "string" }
+              - label: "Sections"
+                name: "sections"
+                widget: "list"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - label: "Items"
+                    name: "items"
+                    widget: "list"
+                    field: { label: "Item", name: "item", widget: "string" }
+          - label: "Day 2"
+            name: "day2"
+            widget: "object"
+            fields:
+              - { label: "Date", name: "date", widget: "string" }
+              - { label: "Theme", name: "theme", widget: "string" }
+              - label: "Sections"
+                name: "sections"
+                widget: "list"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - label: "Items"
+                    name: "items"
+                    widget: "list"
+                    field: { label: "Item", name: "item", widget: "string" }
+          - label: "Bonuses"
+            name: "bonuses"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+
+      - label: "Testimonials"
+        name: "testimonials"
+        file: "content/testimonials.json"
+        fields:
+          - { label: "Section Headline", name: "headline", widget: "string" }
+          - { label: "Section Subheadline", name: "subheadline", widget: "text" }
+          - label: "Testimonials"
+            name: "testimonials"
+            widget: "list"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Result", name: "result", widget: "string" }
+              - { label: "Amount", name: "amount", widget: "string" }
+              - { label: "Quote", name: "quote", widget: "text" }
+              - { label: "Image URL", name: "image", widget: "string" }
+
+      - label: "Pricing & Registration"
+        name: "pricing"
+        file: "content/pricing.json"
+        fields:
+          - { label: "Section Headline", name: "headline", widget: "string" }
+          - { label: "Section Description", name: "description", widget: "text" }
+          - { label: "Event Date", name: "eventDate", widget: "string" }
+          - { label: "Event Location", name: "eventLocation", widget: "string" }
+          - { label: "Original Price", name: "originalPrice", widget: "string" }
+          - { label: "Current Price", name: "currentPrice", widget: "string" }
+          - { label: "Price Description", name: "priceDescription", widget: "string" }
+          - label: "Features Included"
+            name: "features"
+            widget: "list"
+            field: { label: "Feature", name: "feature", widget: "string" }
+          - { label: "Guarantee Title", name: "guaranteeTitle", widget: "string" }
+          - { label: "Guarantee Description", name: "guaranteeDescription", widget: "text" }
+          - { label: "Seats Available", name: "seatsAvailable", widget: "string" }
+
+      - label: "FAQ"
+        name: "faq"
+        file: "content/faq.json"
+        fields:
+          - { label: "Section Headline", name: "headline", widget: "string" }
+          - { label: "Section Description", name: "description", widget: "text" }
+          - label: "FAQ Items"
+            name: "faqs"
+            widget: "list"
+            fields:
+              - { label: "Question", name: "question", widget: "string" }
+              - { label: "Answer", name: "answer", widget: "text" }
+          - { label: "Contact CTA Title", name: "contactTitle", widget: "string" }
+          - { label: "Contact CTA Description", name: "contactDescription", widget: "text" }
+          - { label: "Contact Button Text", name: "contactButton", widget: "string" }

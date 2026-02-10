@@ -1,0 +1,48 @@
+{
+  "headline": "Real Results From Real People",
+  "subheadline": "These people are not different from you. They just know something you don't.",
+  "testimonials": [
+    {
+      "name": "Apple",
+      "result": "Made her first $1,000 online",
+      "amount": "$1,000",
+      "quote": "Praise **saved my life**. I never thought I could make money online, but the system works!",
+      "image": "https://abovezen.com/wp-content/uploads/2026/01/Group-63-768x574.png"
+    },
+    {
+      "name": "Mr Rock",
+      "result": "Made $15,000",
+      "amount": "$15,000",
+      "quote": "**Living my dream life now.** This completely changed everything for me.",
+      "image": "https://abovezen.com/wp-content/uploads/2026/01/rocky-768x749.png"
+    },
+    {
+      "name": "Peter",
+      "result": "Made over 14m in 3 months",
+      "amount": "14m",
+      "quote": "The strategies taught are **practical and actually work**. Best investment I made.",
+      "image": "https://abovezen.com/wp-content/uploads/2026/01/peteru-768x768.png"
+    },
+    {
+      "name": "Anonymous Student",
+      "result": "Made almost $5,000 in profit",
+      "amount": "$5,000",
+      "quote": "I was skeptical at first, but seeing **real results in my account** changed my mind.",
+      "image": "https://abovezen.com/wp-content/uploads/2026/01/photo_2026-01-04_21-51-59-750x1024.jpg"
+    },
+    {
+      "name": "Anonymous Student",
+      "result": "Made more than $5,000 in less than 3 months",
+      "amount": "$5,000+",
+      "quote": "The **global income approach** is different from everything else I've tried.",
+      "image": "https://abovezen.com/wp-content/uploads/2026/01/photo_2026-01-04_21-55-31.jpg"
+    },
+    {
+      "name": "Anonymous Student",
+      "result": "Made over $1,000 in March 2024",
+      "amount": "$1,000+",
+      "quote": "Starting small but **consistent**. Now I understand how to scale this.",
+      "image": "https://abovezen.com/wp-content/uploads/2026/01/photo_2026-01-04_21-54-37-768x738.jpg"
+    }
+  ]
+}

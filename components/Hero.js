@@ -1,14 +1,23 @@
 ﻿'use client'
 import { motion } from 'framer-motion'
 import { FaArrowDown, FaPlay } from 'react-icons/fa'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 export default function Hero() {
   const [showVideo, setShowVideo] = useState(false)
+  const [content, setContent] = useState(null)
+
+  useEffect(() => {
+    fetch('/content/hero.json')
+      .then(res => res.json())
+      .then(data => setContent(data))
+  }, [])
 
   const scrollToForm = () => {
     document.getElementById('register')?.scrollIntoView({ behavior: 'smooth' })
   }
+
+  if (!content) return null
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-dark-900 via-dark-800 to-primary-950">
@@ -34,7 +43,7 @@ export default function Hero() {
             className="mb-8 flex justify-center"
           >
             <img
-              src="/images/Global image logo.png"
+              src={content.logo}
               alt="Global Income Bootcamp"
               className="h-16 md:h-20 w-auto"
             />
@@ -42,15 +51,19 @@ export default function Hero() {
 
           {/* Main Headline */}
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-6 leading-tight">
-            <span className="block text-white mb-2">Build a</span>
+            <span className="block text-white mb-2">{content.headline1}</span>
             <span className="block bg-gradient-to-r from-primary-400 via-emerald-400 to-primary-500 bg-clip-text text-transparent">
-              Global Income Engine
+              {content.headline2}
             </span>
           </h1>
 
           {/* Subheadline */}
           <p className="text-xl md:text-2xl text-gray-200 mb-4 max-w-4xl mx-auto leading-relaxed font-medium">
-            A 2-Day Physical Bootcamp That Shows You How to Earn <span className="text-primary-400 font-bold">Dollars</span> Again and Again
+            {content.subheadline}
+          </p>
+          <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-3xl mx-auto
+">
+            {content.subheadline2}
           </p>
           <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             <span className="font-bold text-white">Without Products. Without Showing Your Face.</span> Using AI and Your Phone.
@@ -69,7 +82,7 @@ export default function Hero() {
                 className="relative group cursor-pointer rounded-2xl overflow-hidden shadow-2xl hover:shadow-primary-500/30 transition-all duration-300"
               >
                 <img
-                  src="https://vumbnail.com/1163352497.jpg"
+                  src={content.videoThumbnail}
                   alt="Watch Video"
                   className="w-full h-auto group-hover:scale-105 transition-transform duration-300"
                 />
@@ -89,7 +102,7 @@ export default function Hero() {
                 <iframe
                   width="100%"
                   height="100%"
-                  src="https://player.vimeo.com/video/1163352497?autoplay=1&title=0&byline=0&portrait=0"
+                  src={`${content.videoUrl}?autoplay=1&title=0&byline=0&portrait=0`}
                   title="Global Income Bootcamp"
                   frameBorder="0"
                   allow="autoplay; fullscreen; picture-in-picture"
@@ -109,7 +122,7 @@ export default function Hero() {
               className="px-10 py-5 bg-gradient-to-r from-emerald-500 via-emerald-400 to-emerald-600 rounded-xl text-white font-bold text-xl shadow-2xl hover:shadow-emerald-500/60 transition-all duration-300"
               style={{ boxShadow: '0 0 30px rgba(16, 185, 129, 0.4)' }}
             >
-               Secure My Seat for ₦25,000
+              {content.primaryButton}
             </motion.button>
             
             <motion.button
@@ -118,18 +131,13 @@ export default function Hero() {
               onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
               className="px-10 py-5 glass-effect border-2 border-emerald-400/50 rounded-xl text-white font-bold text-xl hover:bg-emerald-500/10 transition-all duration-300"
             >
-              Learn More 
+              {content.secondaryButton}
             </motion.button>
           </div>
 
           {/* Stats Grid */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-5xl mx-auto mt-16">
-            {[
-              { number: '6,000+', label: 'Students Trained', icon: '' },
-              { number: '1bn+', label: 'Generated Online', icon: '' },
-              { number: '100', label: 'Seats Only', icon: '' },
-              { number: '2 Days', label: 'Physical Event', icon: '' },
-            ].map((stat, index) => (
+            {content.stats.map((stat, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}

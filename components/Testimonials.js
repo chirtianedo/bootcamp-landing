@@ -1,57 +1,21 @@
 ﻿'use client'
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
-import { useRef } from 'react'
+import { useRef, useState, useEffect } from 'react'
 import { FaStar, FaQuoteLeft } from 'react-icons/fa'
 
 export default function Testimonials() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
+  const [content, setContent] = useState(null)
 
-  const testimonials = [
-    {
-      name: 'Apple',
-      result: 'Made her first $1,000 online',
-      quote: 'Praise **saved my life**. I never thought I could make money online, but the system works!',
-      amount: '$1,000',
-      image: 'https://abovezen.com/wp-content/uploads/2026/01/Group-63-768x574.png'
-    },
-    {
-      name: 'Mr Rock',
-      result: 'Made $15,000',
-      quote: '**Living my dream life now.** This completely changed everything for me.',
-      amount: '$15,000',
-      image: 'https://abovezen.com/wp-content/uploads/2026/01/rocky-768x749.png'
-    },
-    {
-      name: 'Peter',
-      result: 'Made over 14m in 3 months',
-      quote: 'The strategies taught are **practical and actually work**. Best investment I made.',
-      amount: '14m',
-      image: 'https://abovezen.com/wp-content/uploads/2026/01/peteru-768x768.png'
-    },
-    {
-      name: 'Anonymous Student',
-      result: 'Made almost $5,000 in profit',
-      quote: 'I was skeptical at first, but seeing **real results in my account** changed my mind.',
-      amount: '$5,000',
-      image: 'https://abovezen.com/wp-content/uploads/2026/01/photo_2026-01-04_21-51-59-750x1024.jpg'
-    },
-    {
-      name: 'Anonymous Student',
-      result: 'Made more than $5,000 in less than 3 months',
-      quote: 'The **global income approach** is different from everything else I\'ve tried.',
-      amount: '$5,000+',
-      image: 'https://abovezen.com/wp-content/uploads/2026/01/photo_2026-01-04_21-55-31.jpg'
-    },
-    {
-      name: 'Anonymous Student',
-      result: 'Made over $1,000 in March 2024',
-      quote: 'Starting small but **consistent**. Now I understand how to scale this.',
-      amount: '$1,000+',
-      image: 'https://abovezen.com/wp-content/uploads/2026/01/photo_2026-01-04_21-54-37-768x738.jpg'
-    }
-  ]
+  useEffect(() => {
+    fetch('/content/testimonials.json')
+      .then(res => res.json())
+      .then(data => setContent(data))
+  }, [])
+
+  if (!content) return null
 
   const renderText = (text) => {
     const parts = text.split(/(\*\*.*?\*\*)/g)
@@ -79,22 +43,22 @@ export default function Testimonials() {
           className="text-center mb-16"
         >
           <span className="inline-block px-4 py-2 bg-primary-500/10 border border-primary-400/30 rounded-full text-primary-400 text-sm font-bold mb-4">
-             SUCCESS STORIES
+            {content.badge}
           </span>
           <h2 className="text-4xl md:text-6xl font-black mb-6">
             <span className="bg-gradient-to-r from-primary-400 to-emerald-400 bg-clip-text text-transparent">
-              Real Results
+              {content.headline1}
             </span>
             <br />
-            <span className="text-white">From Real People</span>
+            <span className="text-white">{content.headline2}</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            These people are <span className="text-white font-bold">not different from you</span>. They just know something you don&apos;t.
+            {renderText(content.description)}
           </p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (
+          {content.testimonials.map((testimonial, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 30 }}
@@ -151,14 +115,14 @@ export default function Testimonials() {
         >
           <h3 className="text-3xl md:text-4xl font-black mb-4">
             <span className="bg-gradient-to-r from-primary-400 to-emerald-400 bg-clip-text text-transparent">
-              Join 6,000+ Students
+              {content.ctaHeadline}
             </span>
           </h3>
           <p className="text-xl text-gray-200 mb-6">
-            Who have <span className="text-white font-bold">transformed their lives</span>. Hundreds of them are now millionaires.
+            {renderText(content.ctaDescription)}
           </p>
           <p className="text-2xl font-bold text-primary-400">
-            Your turn is next. 
+            {content.ctaFootnote}
           </p>
         </motion.div>
       </div>

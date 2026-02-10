@@ -1,12 +1,13 @@
 'use client'
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
-import { useRef, useState } from 'react'
+import { useRef, useState, useEffect } from 'react'
 import { FaCheck, FaClock, FaMapMarkerAlt, FaShieldAlt } from 'react-icons/fa'
 
 export default function Pricing() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
+  const [content, setContent] = useState(null)
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -15,6 +16,12 @@ export default function Pricing() {
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitted, setSubmitted] = useState(false)
+
+  useEffect(() => {
+    fetch('/content/pricing.json')
+      .then(res => res.json())
+      .then(data => setContent(data))
+  }, [])
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -34,20 +41,9 @@ export default function Pricing() {
     })
   }
 
-  const features = [
-    '2 Full Days of Training',
-    'Physical Event in Abuja',
-    'Global Income Opportunity List',
-    'AI Automation Training',
-    'System Setup Blueprint',
-    'Monetization Strategy',
-    'Businesses Under ₦200k Guide',
-    'Direct Access to Praise Akinlami',
-    'WhatsApp Group Access',
-    'Participant Package',
-    'Lifetime Access to Materials',
-    'Networking with Other Earners'
-  ]
+  if (!content) return null
+
+  const features = content.features || []
 
   return (
     <section id="register" className="py-20 md:py-32 bg-dark-800 relative overflow-hidden">
@@ -111,16 +107,15 @@ export default function Pricing() {
             <div className="bg-primary-500/10 border border-primary-500/30 rounded-2xl p-6 mb-6">
               <h4 className="font-bold text-white mb-2 flex items-center gap-2">
                 <FaShieldAlt className="text-primary-400" />
-                100% Money-Back Guarantee
+                {content.guaranteeTitle}
               </h4>
               <p className="text-sm text-gray-300">
-                Come to Day 1, attend the sessions, and if you genuinely feel this isn&apos;t what you expected, 
-                tell my team before the end of Day 1, and we&apos;ll refund your ticket. No stress.
+                {content.guaranteeDescription}
               </p>
             </div>
 
             <div className="text-center">
-              <div className="text-primary-400 font-semibold mb-2">⚡ Only 100 Seats Available</div>
+              <div className="text-primary-400 font-semibold mb-2">⚡ Only {content.seatsAvailable} Seats Available</div>
               <div className="text-gray-400 text-sm">Physical venue capacity is limited</div>
             </div>
           </motion.div>

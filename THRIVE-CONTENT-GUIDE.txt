@@ -1,0 +1,391 @@
+=====================================================
+GLOBAL INCOME BOOTCAMP - THRIVE ARCHITECT GUIDE
+=====================================================
+
+📂 STATIC HTML REFERENCE: Check the /out folder for actual HTML files
+   Open /out/index.html in browser while building in Thrive
+
+=====================================================
+🎨 COLOR SCHEME
+=====================================================
+
+PRIMARY COLORS:
+- Primary Green: #10b981 (main brand color)
+- Light Green: #34d399 (accents, buttons)
+- Emerald: #10b981
+
+TEXT COLORS:
+- White: #FFFFFF (headings)
+- Light Gray: #d1d5db (body text)
+- Dark Gray: #9ca3af (secondary text)
+
+BACKGROUND COLORS:
+- Pure Black: #000000
+- Dark 800: #0a0a0a
+- Dark 700: #111111
+
+SPECIAL EFFECTS:
+- Gradient: Linear gradient from #34d399 to #10b981
+- Glass Effect: White 5% opacity with blur
+- Borders: Primary color at 20-50% opacity
+
+FONT:
+- Inter (Google Fonts)
+- Fallback: -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif
+
+=====================================================
+📄 SECTION 1: HERO (Top of Page)
+=====================================================
+
+LOGO:
+- File: /images/Global image logo.png
+- Size: Height 64-80px, auto width
+
+MAIN HEADLINE (Extra Large, Bold):
+"Build a"
+"Global Income Engine" (Gradient text: #34d399 to #10b981)
+
+SUBHEADLINE (Large):
+"A 2-Day Physical Bootcamp That Shows You How to Earn Dollars Again and Again"
+"Without Products. Without Showing Your Face. Using AI and Your Phone."
+
+VIDEO:
+- Thumbnail: https://vumbnail.com/1163352497.jpg
+- Video URL: https://player.vimeo.com/video/1163352497
+- Text overlay: "WATCH THE VIDEO. IT EXPLAINS EVERYTHING."
+
+CTA BUTTONS:
+1. Primary: "Secure My Seat for ₦25,000" (Green gradient button with glow)
+2. Secondary: "Learn More" (Glass effect border button)
+
+STATS (4 Boxes):
+1. "6,000+" - Students Trained
+2. "1bn+" - Generated Online
+3. "100" - Seats Only
+4. "2 Days" - Physical Event
+
+=====================================================
+📄 SECTION 2: ABOUT
+=====================================================
+
+HEADLINE:
+"Who Are Global Earners?"
+
+SUBHEADLINE:
+"They are people who understand how global companies acquire customers, how money flows internationally, and how to position themselves quietly in the middle."
+
+THE PROBLEM (Left Box - Red Crosses):
+✗ Jumping from one online hustle to another
+✗ Watching others succeed while nothing sticks for you
+✗ Earning in naira while inflation threatens your life
+✗ Feeling like you're always late to every opportunity
+
+THE SOLUTION (Right Box - Green Checks with Border):
+✓ A repeatable system that pays again and again
+✓ Dollar income from global companies
+✓ Build once and refine — not start over
+✓ A skill that works anywhere: Nigeria, UK, US
+
+CLOSING TEXT:
+"Most Nigerians are not lazy. They are mispositioned.
+The people earning consistent dollar income online are not smarter than you.
+They just understand the systems."
+
+=====================================================
+📄 SECTION 3: WHY THIS WORKS
+=====================================================
+
+HEADLINE:
+"This Works Even If"
+
+3 FEATURE BOXES:
+1. No Products Yet
+   "You don't need to create your own products. Learn to position yourself with existing global opportunities."
+
+2. Full-Time Job? No Problem
+   "Perfect for side income. Build systems that work even while you're at your 9-5 or running other businesses."
+
+3. Don't Show Your Face
+   "Opportunity where you don't need to be visible. Earn quietly, repeatably, and globally."
+
+PROFILE SECTION:
+Image: /images/PA 1.jpeg
+
+"Why Should You Listen To Me?"
+
+"My name is Praise Akinlami. I'm a global income earner.
+
+In 2020, I lived in a flooded apartment. That experience changed how I saw my life. I decided I was done struggling and made a clear choice to do better.
+
+Today, I've made close to ₦1 billion online and trained over 6,000 people. Hundreds of them are now millionaires through the skills and systems I teach.
+
+I've built a community of over 300,000 people across social media and I earn from anywhere in the world. Most importantly, I live life on my own terms.
+
+My story is proof that where you start does not have to limit where you end up."
+
+=====================================================
+📄 SECTION 4: BOOTCAMP CONTENT
+=====================================================
+
+HEADLINE:
+"What Happens At The Bootcamp"
+
+SUBHEADLINE:
+"2 Days of practical systems, not theory. Physical event with hands-on training."
+
+DAY 1 - FEBRUARY 14: Direction & Clarity
+
+BOX 1: The Global Income Map
+• How money really moves online (why creators & traders struggle)
+• Which global companies pay, and why
+• The exact position "global income earners" occupy
+
+BOX 2: Why Nigerians Lose Online
+• The mindset traps
+• The misinformation problem
+• Why "learning skills" alone isn't enough
+• How to position yourself correctly from Nigeria
+
+DAY 2 - FEBRUARY 15: Action Taking & Scaling
+
+BOX 1: Automation & Leverage with AI
+• AI to replace manual work
+• Simple systems to run income on autopilot
+• Tools that work even if you have a job, school, or family
+
+BOX 2: Make Money with AI
+• Finding offers
+• Creating funnels
+• Handling follow-ups
+• Scaling income without hiring a big team
+
+EXCLUSIVE BONUSES INCLUDED (4 boxes):
+1. Global Income Opportunity List
+   "Curated list of middleman opportunities paying ₦10m to ₦100m yearly without showing your face"
+
+2. Businesses Under ₦200k
+   "Real examples and case studies you can start with minimal capital"
+
+3. System Setup Blueprint
+   "One income engine + One traffic source + One automation flow (no overwhelm)"
+
+4. Monetization & Scale Strategy
+   "Turn small wins into consistent income that compounds monthly"
+
+=====================================================
+📄 SECTION 5: TESTIMONIALS
+=====================================================
+
+HEADLINE:
+"Real Results From Real People"
+
+SUBHEADLINE:
+"These people are not different from you. They just know something you don't."
+
+TESTIMONIALS (6 Cards):
+
+1. Apple - Made her first $1,000 online
+   Image: https://abovezen.com/wp-content/uploads/2026/01/Group-63-768x574.png
+   "Praise saved my life. I never thought I could make money online, but the system works!"
+   ⭐⭐⭐⭐⭐
+
+2. Mr Rock - Made $15,000
+   Image: https://abovezen.com/wp-content/uploads/2026/01/rocky-768x749.png
+   "Living my dream life now. This completely changed everything for me."
+   ⭐⭐⭐⭐⭐
+
+3. Peter - Made over 14m in 3 months
+   Image: https://abovezen.com/wp-content/uploads/2026/01/peteru-768x768.png
+   "The strategies taught are practical and actually work. Best investment I made."
+   ⭐⭐⭐⭐⭐
+
+4. Anonymous - Made almost $5,000 in profit
+   Image: https://abovezen.com/wp-content/uploads/2026/01/photo_2026-01-04_21-51-59-750x1024.jpg
+   "I was skeptical at first, but seeing real results in my account changed my mind."
+   ⭐⭐⭐⭐⭐
+
+5. Anonymous - Made more than $5,000 in less than 3 months
+   Image: https://abovezen.com/wp-content/uploads/2026/01/photo_2026-01-04_21-55-31.jpg
+   "The global income approach is different from everything else I've tried."
+   ⭐⭐⭐⭐⭐
+
+6. Anonymous - Made over $1,000 in March 2024
+   Image: https://abovezen.com/wp-content/uploads/2026/01/photo_2026-01-04_21-54-37-768x738.jpg
+   "Starting small but consistent. Now I understand how to scale this."
+   ⭐⭐⭐⭐⭐
+
+BOTTOM CTA:
+"Join 6,000+ Students"
+"Who have transformed their lives. Hundreds of them are now millionaires."
+"Your turn is next."
+
+=====================================================
+📄 SECTION 6: PRICING & REGISTRATION
+=====================================================
+
+HEADLINE:
+"Secure Your Seat"
+
+SUBHEADLINE:
+"Limited to 100 seats only. When seats finish, registration closes."
+
+EVENT DETAILS:
+📅 Feb 14-15, 2026
+📍 Abuja, Nigeria
+🛡️ 100% Money-Back Guarantee
+
+PRICING CARD (Left Side):
+Original Price: ₦100,000 (strikethrough)
+Current Price: ₦25,000 (Large, Gradient)
+"One-time payment"
+
+WHAT'S INCLUDED (Checkmarks):
+✓ 2 Full Days of Training
+✓ Physical Event in Abuja
+✓ Global Income Opportunity List
+✓ AI Automation Training
+✓ System Setup Blueprint
+✓ Monetization Strategy
+✓ Businesses Under ₦200k Guide
+✓ Direct Access to Praise Akinlami
+✓ WhatsApp Group Access
+✓ Participant Package
+✓ Lifetime Access to Materials
+✓ Networking with Other Earners
+
+GUARANTEE BOX:
+"100% Money-Back Guarantee"
+"Come to Day 1, attend the sessions, and if you genuinely feel this isn't what you expected, tell my team before the end of Day 1, and we'll refund your ticket. No stress."
+
+WARNING:
+"⚡ Only 100 Seats Available"
+"Physical venue capacity is limited"
+
+REGISTRATION FORM (Right Side):
+Title: "Register Now"
+Subtitle: "Fill out the form below to secure your seat. You'll receive payment instructions and be added to the WhatsApp group."
+
+FORM FIELDS:
+- Full Name * (Required)
+- Email Address * (Required)
+- Phone Number * (Required)
+- WhatsApp Number * (Required)
+
+SUBMIT BUTTON:
+"Secure My Seat Now" (Green gradient)
+
+=====================================================
+📄 SECTION 7: FAQ
+=====================================================
+
+HEADLINE:
+"Frequently Asked Questions"
+
+SUBHEADLINE:
+"Everything you need to know about the bootcamp"
+
+8 FAQ ITEMS (Accordion Style):
+
+Q: Do I need to be tech-savvy?
+A: Not at all! The systems we teach are designed for anyone to follow. If you can use a smartphone, you can implement these strategies. We break everything down into simple, actionable steps.
+
+Q: Is this for beginners?
+A: Yes! Whether you're completely new to online income or you've tried other things before, this bootcamp will give you the clarity and systems you need. We start from the fundamentals and build up.
+
+Q: Do I need to show my face online?
+A: No! One of the key advantages of being a Global Income Earner is that you can operate behind the scenes. You don't need to be an influencer or show your face at all.
+
+Q: Is it only for Nigerians?
+A: While the event is physically in Abuja, the strategies work globally. However, we specifically show how to position yourself from Nigeria to tap into global opportunities.
+
+Q: What happens after I pay?
+A: You'll be added to the WhatsApp group where you'll receive all event updates, what to bring, venue details, and step-by-step instructions leading up to the bootcamp.
+
+Q: What if I can't make it to Abuja?
+A: This is a physical-only event to ensure maximum value and hands-on learning. We don't offer virtual attendance for this bootcamp as the in-person experience is crucial.
+
+Q: How does the money-back guarantee work?
+A: Attend Day 1 sessions. If you genuinely feel this isn't what you expected, inform our team before Day 1 ends, and we'll refund your ticket. Simple as that.
+
+Q: Do I need any capital to start?
+A: Not necessarily. We'll show you opportunities that require minimal to no capital, as well as businesses you can start with ₦200,000 or less. The focus is on systems and positioning, not huge investments.
+
+CONTACT BOX:
+"Still have questions?"
+"Contact us via WhatsApp and we'll get back to you as soon as possible."
+
+Button: "Contact Support"
+WhatsApp: +234 701 081 2785
+Message Template: "Hi, I have questions about the Global Income Bootcamp"
+
+Link Text:
+"Click here to register via WhatsApp"
+WhatsApp: +234 701 081 2785
+Message Template: "Hi, I want to register for the Global Income Bootcamp"
+
+=====================================================
+📄 FOOTER (Optional)
+=====================================================
+
+Copyright: © 2026 Global Income Bootcamp
+Social Links: (if available)
+Contact: +234 701 081 2785
+
+=====================================================
+🎯 DESIGN TIPS FOR THRIVE ARCHITECT
+=====================================================
+
+1. BACKGROUNDS:
+   - Use pure black (#000000) as base
+   - Add subtle gradient overlays
+   - Use blur effects for depth
+
+2. BUTTONS:
+   - Primary: Green gradient (#34d399 to #10b981)
+   - Add glow/shadow effects
+   - Border radius: 12-16px
+
+3. CARDS/BOXES:
+   - Semi-transparent white (5% opacity)
+   - Border: 1-2px, primary color at 20% opacity
+   - Border radius: 24px
+   - Add hover effects (lift, scale)
+
+4. TYPOGRAPHY:
+   - Headlines: 48-96px, Bold/Black weight
+   - Subheads: 24-32px, Medium/Semibold
+   - Body: 16-20px, Regular
+   - Use gradient on key phrases
+
+5. SPACING:
+   - Section padding: 80-128px top/bottom
+   - Element spacing: 32-64px
+   - Card grid gaps: 24-32px
+
+6. ANIMATIONS:
+   - Fade in on scroll
+   - Hover lift on cards (move up 10px)
+   - Button hover glow
+   - Smooth transitions (300ms)
+
+7. VIDEO EMBED:
+   - Aspect ratio: 16:9
+   - Max width: 1200px
+   - Add play button overlay
+
+8. RESPONSIVE:
+   - Stack cards on mobile
+   - Reduce font sizes 30-40%
+   - Maintain readability
+
+=====================================================
+✅ NEXT STEPS
+=====================================================
+
+1. Open /out/index.html in browser for visual reference
+2. Start building sections in Thrive Architect
+3. Use this guide for exact text and colors
+4. Test on mobile devices
+5. Connect form to email/WhatsApp
+
+=====================================================

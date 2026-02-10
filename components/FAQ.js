@@ -1,52 +1,28 @@
 'use client'
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
-import { useRef, useState } from 'react'
+import { useRef, useState, useEffect } from 'react'
 import { FaChevronDown } from 'react-icons/fa'
 
 export default function FAQ() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
   const [openIndex, setOpenIndex] = useState(null)
+  const [content, setContent] = useState(null)
 
-  const faqs = [
-    {
-      question: 'Do I need to be tech-savvy?',
-      answer: 'Not at all! The systems we teach are designed for anyone to follow. If you can use a smartphone, you can implement these strategies. We break everything down into simple, actionable steps.'
-    },
-    {
-      question: 'Is this for beginners?',
-      answer: 'Yes! Whether you\'re completely new to online income or you\'ve tried other things before, this bootcamp will give you the clarity and systems you need. We start from the fundamentals and build up.'
-    },
-    {
-      question: 'Do I need to show my face online?',
-      answer: 'No! One of the key advantages of being a Global Income Earner is that you can operate behind the scenes. You don\'t need to be an influencer or show your face at all.'
-    },
-    {
-      question: 'Is it only for Nigerians?',
-      answer: 'While the event is physically in Abuja, the strategies work globally. However, we specifically show how to position yourself from Nigeria to tap into global opportunities.'
-    },
-    {
-      question: 'What happens after I pay?',
-      answer: 'You\'ll be added to the WhatsApp group where you\'ll receive all event updates, what to bring, venue details, and step-by-step instructions leading up to the bootcamp.'
-    },
-    {
-      question: 'What if I can\'t make it to Abuja?',
-      answer: 'This is a physical-only event to ensure maximum value and hands-on learning. We don\'t offer virtual attendance for this bootcamp as the in-person experience is crucial.'
-    },
-    {
-      question: 'How does the money-back guarantee work?',
-      answer: 'Attend Day 1 sessions. If you genuinely feel this isn\'t what you expected, inform our team before Day 1 ends, and we\'ll refund your ticket. Simple as that.'
-    },
-    {
-      question: 'Do I need any capital to start?',
-      answer: 'Not necessarily. We\'ll show you opportunities that require minimal to no capital, as well as businesses you can start with ₦200,000 or less. The focus is on systems and positioning, not huge investments.'
-    }
-  ]
+  useEffect(() => {
+    fetch('/content/faq.json')
+      .then(res => res.json())
+      .then(data => setContent(data))
+  }, [])
+
+  if (!content) return null
 
   const toggleFAQ = (index) => {
     setOpenIndex(openIndex === index ? null : index)
   }
+
+  const faqs = content.faqs || []
 
   return (
     <section id="faq" className="py-20 md:py-32 bg-dark-900 relative overflow-hidden">
@@ -62,10 +38,10 @@ export default function FAQ() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-6xl font-bold mb-6">
-            <span className="text-gradient">Frequently Asked Questions</span>
+            <span className="text-gradient">{content.headline}</span>
           </h2>
           <p className="text-xl text-gray-300">
-            Everything you need to know about the bootcamp
+            {content.description}
           </p>
         </motion.div>
 
@@ -113,9 +89,9 @@ export default function FAQ() {
           transition={{ duration: 0.6, delay: 0.8 }}
           className="mt-16 text-center glass-effect rounded-3xl p-8 border-2 border-primary-500/30"
         >
-          <h3 className="text-2xl font-bold mb-4 text-white">Still have questions?</h3>
+          <h3 className="text-2xl font-bold mb-4 text-white">{content.contactTitle}</h3>
           <p className="text-gray-300 mb-6">
-            Contact us via WhatsApp and we&apos;ll get back to you as soon as possible.
+            {content.contactDescription}
           </p>
           <a
             href="https://wa.me/2347010812785?text=Hi,%20I%20have%20questions%20about%20the%20Global%20Income%20Bootcamp"
@@ -123,7 +99,7 @@ export default function FAQ() {
             rel="noopener noreferrer"
             className="inline-block px-8 py-3 bg-gradient-to-r from-primary-500 to-primary-600 rounded-xl text-white font-semibold hover:shadow-lg hover:shadow-primary-500/50 transition-all duration-300"
           >
-            Contact Support
+            {content.contactButton}
           </a>
           <p className="mt-4 text-gray-400 text-sm">
             <a 

@@ -1,11 +1,20 @@
 'use client'
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
-import { useRef } from 'react'
+import { useRef, useState, useEffect } from 'react'
 
 export default function About() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
+  const [content, setContent] = useState(null)
+
+  useEffect(() => {
+    fetch('/content/about.json')
+      .then(res => res.json())
+      .then(data => setContent(data))
+  }, [])
+
+  if (!content) return null
 
   return (
     <section id="about" className="py-20 md:py-32 bg-dark-800 relative overflow-hidden">
@@ -21,11 +30,10 @@ export default function About() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-6xl font-bold mb-6">
-            <span className="text-gradient">Who Are Global Earners?</span>
+            <span className="text-gradient">{content.headline}</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            They are people who understand how global companies acquire customers, 
-            how money flows internationally, and how to position themselves quietly in the middle.
+            {content.description}
           </p>
         </motion.div>
 
@@ -38,12 +46,7 @@ export default function About() {
           >
             <h3 className="text-3xl font-bold mb-6 text-white">The Problem</h3>
             <ul className="space-y-4">
-              {[
-                'Jumping from one online hustle to another',
-                'Watching others succeed while nothing sticks for you',
-                'Earning in naira while inflation threatens your life',
-                'Feeling like you\'re always late to every opportunity',
-              ].map((item, index) => (
+              {content.problems.map((item, index) => (
                 <li key={index} className="flex items-start gap-3">
                   <span className="text-red-400 text-xl mt-1">✗</span>
                   <span className="text-gray-300">{item}</span>
@@ -60,12 +63,7 @@ export default function About() {
           >
             <h3 className="text-3xl font-bold mb-6 text-gradient">The Solution</h3>
             <ul className="space-y-4">
-              {[
-                'A repeatable system that pays again and again',
-                'Dollar income from global companies',
-                'Build once and refine — not start over',
-                'A skill that works anywhere: Nigeria, UK, US',
-              ].map((item, index) => (
+              {content.solutions.map((item, index) => (
                 <li key={index} className="flex items-start gap-3">
                   <span className="text-primary-400 text-xl mt-1">✓</span>
                   <span className="text-gray-100 font-medium">{item}</span>
@@ -81,12 +79,8 @@ export default function About() {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="text-center"
         >
-          <p className="text-2xl text-gray-200 font-medium max-w-4xl mx-auto leading-relaxed">
-            Most Nigerians are not lazy. <span className="text-primary-400">They are mispositioned.</span>
-            <br />
-            The people earning consistent dollar income online are not smarter than you.
-            <br />
-            <span className="text-gradient font-bold">They just understand the systems.</span>
+          <p className="text-2xl text-gray-200 font-medium max-w-4xl mx-auto leading-relaxed whitespace-pre-line">
+            {content.bottomText}
           </p>
         </motion.div>
       </div>
