@@ -5,6 +5,14 @@
 [build.environment]
   NODE_VERSION = "18"
 
+# Prevent caching of config.yml - CRITICAL for CMS updates
+[[headers]]
+  for = "/admin/config.yml"
+  [headers.values]
+    Cache-Control = "no-cache, no-store, must-revalidate"
+    Pragma = "no-cache"
+    Expires = "0"
+
 # Admin panel redirects - CRITICAL for CMS access
 [[redirects]]
   from = "/admin"
