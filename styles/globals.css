@@ -11,28 +11,17 @@
   }
 
   body {
-    @apply bg-dark-900 text-gray-100;
+    background-color: #0f172a;
+    color: #f3f4f6;
   }
   
-  /* Force text visibility */
-  body, section, div, p, span, h1, h2, h3, h4, h5, h6, li {
-    color: #e5e7eb !important;
+  /* Ensure all text is visible by default */
+  p, span, li, div {
+    color: #e5e7eb;
   }
   
-  .text-white {
-    color: #ffffff !important;
-  }
-  
-  .text-gray-300 {
-    color: #d1d5db !important;
-  }
-  
-  .text-gray-400 {
-    color: #9ca3af !important;
-  }
-  
-  .text-gray-500 {
-    color: #6b7280 !important;
+  h1, h2, h3, h4, h5, h6 {
+    color: #ffffff;
   }
   
   /* Smooth scrolling for sections */
@@ -72,11 +61,29 @@
 
 @layer utilities {
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-400 to-emerald-400;
+    /* Fallback for when gradient doesn't work */
+    color: #10b981;
+    /* Gradient text effect */
+    background: linear-gradient(to right, #34d399, #10b981);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+  
+  /* Ensure gradient text shows in static export */
+  @supports not (background-clip: text) {
+    .text-gradient {
+      color: #10b981 !important;
+      background: none !important;
+      -webkit-text-fill-color: #10b981 !important;
+    }
   }
 
   .glass-effect {
-    @apply bg-white/20 backdrop-blur-lg border border-white/30;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
   }
 
   .glow-effect {
@@ -107,5 +114,38 @@
   .reveal-on-scroll.visible {
     opacity: 1;
     transform: translateY(0);
+  }
+  
+  /* Explicit Tailwind color overrides for static export */
+  .text-white {
+    color: #ffffff !important;
+  }
+  
+  .text-gray-100 {
+    color: #f3f4f6 !important;
+  }
+  
+  .text-gray-300 {
+    color: #d1d5db !important;
+  }
+  
+  .text-gray-400 {
+    color: #9ca3af !important;
+  }
+  
+  .text-gray-500 {
+    color: #6b7280 !important;
+  }
+  
+  .text-primary-400 {
+    color: #34d399 !important;
+  }
+  
+  .text-emerald-400 {
+    color: #34d399 !important;
+  }
+  
+  .text-red-400 {
+    color: #f87171 !important;
   }
 }
