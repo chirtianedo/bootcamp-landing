@@ -1,9 +1,6 @@
 backend:
-  name: github
-  repo: chirtianedo/bootcamp-landing
+  name: git-gateway
   branch: main
-  auth_type: pkce
-  app_id: Ov23liLTJSMGn2llkxKQ
 
 media_folder: public/images
 public_folder: /images

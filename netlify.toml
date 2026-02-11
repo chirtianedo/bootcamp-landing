@@ -1,16 +1,25 @@
 [build]
-  command = "npm run build"
+  command = "npm run build && mkdir -p out/admin && cp -r public/admin/* out/admin/ && cp -r public/content out/content"
   publish = "out"
 
 [build.environment]
   NODE_VERSION = "18"
 
+# Admin panel redirects - CRITICAL for CMS access
 [[redirects]]
   from = "/admin"
   to = "/admin/index.html"
   status = 200
+  force = true
 
 [[redirects]]
   from = "/admin/*"
-  to = "/admin/:splat"
+  to = "/admin/index.html"
+  status = 200
+  force = true
+
+# SPA fallback for other routes
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
   status = 200

@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:test": "next build && if not exist out\\admin mkdir out\\admin && xcopy /E /I /Y public\\admin out\\admin && if not exist out\\content mkdir out\\content && xcopy /E /I /Y public\\content out\\content",
     "start": "next start -p $PORT",
     "lint": "next lint"
   },
