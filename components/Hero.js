@@ -61,13 +61,10 @@ export default function Hero() {
           <p className="text-xl md:text-2xl text-gray-200 mb-4 max-w-4xl mx-auto leading-relaxed font-medium">
             {content.subheadline}
           </p>
-          <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-3xl mx-auto
-">
+          <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             {content.subheadline2}
           </p>
-          <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            <span className="font-bold text-white">Without Products. Without Showing Your Face.</span> Using AI and Your Phone.
-          </p>
+
 
           {/* Video Section */}
           <motion.div
