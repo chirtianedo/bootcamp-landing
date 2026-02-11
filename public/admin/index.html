@@ -10,7 +10,25 @@
 <body>
   <!-- Include the script that builds the page and powers Decap CMS -->
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  
   <script>
+    // Explicitly check if config.yml is accessible
+    fetch('/admin/config.yml')
+      .then(response => {
+        console.log('Config fetch status:', response.status);
+        if (!response.ok) {
+          console.error('Failed to load config.yml from /admin/config.yml');
+        }
+        return response.text();
+      })
+      .then(config => {
+        console.log('Config loaded, length:', config.length);
+      })
+      .catch(err => {
+        console.error('Config load error:', err);
+      });
+    
+    // Netlify Identity widget
     if (window.netlifyIdentity) {
       window.netlifyIdentity.on("init", user => {
         if (!user) {

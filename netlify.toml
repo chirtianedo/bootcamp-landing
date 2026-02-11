@@ -12,13 +12,10 @@
   status = 200
   force = true
 
-[[redirects]]
-  from = "/admin/*"
-  to = "/admin/index.html"
-  status = 200
-  force = true
+# NOTE: Do NOT redirect /admin/* because it breaks config.yml loading
+# The admin folder is static, config.yml must be served as-is
 
-# SPA fallback for other routes
+# SPA fallback for other routes (but not /admin/*)
 [[redirects]]
   from = "/*"
   to = "/index.html"
