@@ -2,7 +2,7 @@ backend:
   name: github
   repo: chirtianedo/bootcamp-landing
   branch: main
-  auth_type: pkce
+  auth_type: implicit
   app_id: Ov23liLTJSMGn2llkxKQ
 
 media_folder: public/images
