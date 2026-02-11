@@ -7,7 +7,14 @@ import { FaCheck, FaClock, FaMapMarkerAlt, FaShieldAlt } from 'react-icons/fa'
 export default function Pricing() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
-  const [content, setContent] = useState(null)
+  const [content, setContent] = useState({
+    headline: "Investment & Registration",
+    features: ["Loading..."],
+    registrationTitle: "Secure Your Spot",
+    guaranteeTitle: "Loading...",
+    guaranteeDescription: "Loading...",
+    seatsAvailable: "100"
+  })
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -21,6 +28,7 @@ export default function Pricing() {
     fetch('/content/pricing.json')
       .then(res => res.json())
       .then(data => setContent(data))
+      .catch(err => console.error('Failed to load pricing.json:', err))
   }, [])
 
   const handleSubmit = async (e) => {
@@ -40,8 +48,6 @@ export default function Pricing() {
       [e.target.name]: e.target.value
     })
   }
-
-  if (!content) return null
 
   const features = content.features || []
 

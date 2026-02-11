@@ -6,15 +6,20 @@ import { useRef, useState, useEffect } from 'react'
 export default function About() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
-  const [content, setContent] = useState(null)
+  const [content, setContent] = useState({
+    headline: "Who Are Global Earners?",
+    description: "They are people who understand how global companies acquire customers.",
+    problems: ["Loading content..."],
+    solutions: ["Loading content..."],
+    bottomText: "Loading..."
+  })
 
   useEffect(() => {
     fetch('/content/about.json')
       .then(res => res.json())
       .then(data => setContent(data))
+      .catch(err => console.error('Failed to load about.json:', err))
   }, [])
-
-  if (!content) return null
 
   return (
     <section id="about" className="py-20 md:py-32 bg-dark-800 relative overflow-hidden">

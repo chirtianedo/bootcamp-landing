@@ -7,15 +7,18 @@ import { FaStar, FaQuoteLeft } from 'react-icons/fa'
 export default function Testimonials() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
-  const [content, setContent] = useState(null)
+  const [content, setContent] = useState({
+    headline1: "Real Results",
+    headline2: "From Real People",
+    testimonials: [{name: "Loading...", role: "Loading", content: "Loading content...", image: "/images/default-avatar.jpg"}]
+  })
 
   useEffect(() => {
     fetch('/content/testimonials.json')
       .then(res => res.json())
       .then(data => setContent(data))
+      .catch(err => console.error('Failed to load testimonials.json:', err))
   }, [])
-
-  if (!content) return null
 
   const renderText = (text) => {
     if (!text) return ''

@@ -8,15 +8,21 @@ export default function FAQ() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
   const [openIndex, setOpenIndex] = useState(null)
-  const [content, setContent] = useState(null)
+  const [content, setContent] = useState({
+    headline: "Frequently Asked Questions",
+    description: "Loading...",
+    faqs: [{question: "Loading...", answer: "Loading content..."}],
+    contactTitle: "Have More Questions?",
+    contactText: "Loading...",
+    contactButtonText: "Contact Us"
+  })
 
   useEffect(() => {
     fetch('/content/faq.json')
       .then(res => res.json())
       .then(data => setContent(data))
+      .catch(err => console.error('Failed to load faq.json:', err))
   }, [])
-
-  if (!content) return null
 
   const toggleFAQ = (index) => {
     setOpenIndex(openIndex === index ? null : index)

@@ -11,22 +11,39 @@
   }
 
   body {
-    background-color: #0f172a;
-    color: #f3f4f6;
+    background-color: #0f172a !important;
+    color: #f3f4f6 !important;
+    font-family: 'Inter', sans-serif;
   }
   
-  /* Ensure all text is visible by default */
-  p, span, li, div {
-    color: #e5e7eb;
+  /* Force all text to be visible - CRITICAL FIX */
+  * {
+    color: inherit;
+  }
+  
+  p, span, li, div, a {
+    color: #e5e7eb !important;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    color: #ffffff;
+    color: #ffffff !important;
   }
   
-  /* Smooth scrolling for sections */
+  /* Debug: Add visible outline to sections */
   section {
     scroll-margin-top: 80px;
+    min-height: 200px;
+    position: relative;
+  }
+  
+  /* Debug border for sections */
+  section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border: 1px dashed rgba(16, 185, 129, 0.2);
+    pointer-events: none;
+    z-index: 9999;
   }
 }
 
@@ -81,9 +98,11 @@
   }
 
   .glass-effect {
-    background: rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.15) !important;
+    backdrop-filter: blur(16px) !important;
+    border: 2px solid rgba(255, 255, 255, 0.3) !important;
+    /* Debug border to see containers */
+    box-shadow: 0 0 0 1px rgba(16, 185, 129, 0.3) !important;
   }
 
   .glow-effect {
@@ -147,5 +166,32 @@
   
   .text-red-400 {
     color: #f87171 !important;
+  }
+  
+  /* Force input fields to be visible */
+  input, textarea, select {
+    color: #ffffff !important;
+    background-color: rgba(15, 23, 42, 0.9) !important;
+    border-color: rgba(148, 163, 184, 0.5) !important;
+  }
+  
+  input::placeholder, textarea::placeholder {
+    color: #6b7280 !important;
+    opacity: 1 !important;
+  }
+  
+  /* Force button text to be visible */
+  button {
+    color: inherit;
+  }
+  
+  button.bg-gradient-to-r,
+  a.bg-gradient-to-r {
+    color: #ffffff !important;
+  }
+  
+  /* Ensure list items are visible */
+  ul li, ol li {
+    color: #e5e7eb !important;
   }
 }

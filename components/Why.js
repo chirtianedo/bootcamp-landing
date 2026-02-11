@@ -7,15 +7,21 @@ import { FaUserSecret, FaBriefcase, FaEyeSlash } from 'react-icons/fa'
 export default function Why() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
-  const [content, setContent] = useState(null)
+  const [content, setContent] = useState({
+    headline: "Why This Works",
+    features: [{title: "Loading...", description: "Loading content...", icon: "FaUserSecret"}],
+    profileHeadline: "Loading...",
+    profileName: "Loading",
+    profileImage: "/images/PA 1.jpeg",
+    profileBio: "Loading content..."
+  })
 
   useEffect(() => {
     fetch('/content/why.json')
       .then(res => res.json())
       .then(data => setContent(data))
+      .catch(err => console.error('Failed to load why.json:', err))
   }, [])
-
-  if (!content) return null
 
   const icons = [<FaUserSecret key="icon-0" className="text-4xl" />, <FaBriefcase key="icon-1" className="text-4xl" />, <FaEyeSlash key="icon-2" className="text-4xl" />]
 

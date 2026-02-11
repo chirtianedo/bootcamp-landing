@@ -5,19 +5,27 @@ import { useState, useEffect } from 'react'
 
 export default function Hero() {
   const [showVideo, setShowVideo] = useState(false)
-  const [content, setContent] = useState(null)
+  const [content, setContent] = useState({
+    headline1: "Stop Chasing Opportunities.",
+    headline2: "Start Being The Opportunity.",
+    subheadline: "Loading...",
+    videoThumbnail: "/images/video-thumbnail.jpg",
+    videoCaption: "Loading...",
+    stats: [{number: "0", label: "..."}],
+    primaryButtonText: "Register Now",
+    secondaryButtonText: "Watch Video"
+  })
 
   useEffect(() => {
     fetch('/content/hero.json')
       .then(res => res.json())
       .then(data => setContent(data))
+      .catch(err => console.error('Failed to load hero.json:', err))
   }, [])
 
   const scrollToForm = () => {
     document.getElementById('register')?.scrollIntoView({ behavior: 'smooth' })
   }
-
-  if (!content) return null
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-dark-900 via-dark-800 to-primary-950">

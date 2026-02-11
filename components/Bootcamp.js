@@ -7,15 +7,28 @@ import { FaCalendarDay, FaRocket, FaRobot, FaChartLine } from 'react-icons/fa'
 export default function Bootcamp() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
-  const [content, setContent] = useState(null)
+  const [content, setContent] = useState({
+    headline: "The 2-Day Bootcamp",
+    description: "Loading content...",
+    day1: {
+      title: "Day 1",
+      subtitle: "Loading...",
+      sections: [{title: "Loading", items: ["Loading..."]}]
+    },
+    day2: {
+      title: "Day 2",
+      subtitle: "Loading...",
+      sections: [{title: "Loading", items: ["Loading..."]}]
+    },
+    bonuses: [{title: "Bonus", description: "Loading..."}]
+  })
 
   useEffect(() => {
     fetch('/content/bootcamp.json')
       .then(res => res.json())
       .then(data => setContent(data))
+      .catch(err => console.error('Failed to load bootcamp.json:', err))
   }, [])
-
-  if (!content) return null
 
   const iconMap = {
     FaRocket: <FaRocket className="text-3xl" />,
