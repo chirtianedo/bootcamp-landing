@@ -2,8 +2,8 @@ backend:
   name: git-gateway
   branch: main
 
-media_folder: public/images
-public_folder: /images
+media_folder: "public/images"
+public_folder: "/images"
 
 collections:
   - name: "settings"
@@ -82,8 +82,8 @@ collections:
             name: "day1"
             widget: "object"
             fields:
-              - { label: "Date", name: "date", widget: "string" }
-              - { label: "Theme", name: "theme", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "string" }
               - label: "Sections"
                 name: "sections"
                 widget: "list"
@@ -97,8 +97,8 @@ collections:
             name: "day2"
             widget: "object"
             fields:
-              - { label: "Date", name: "date", widget: "string" }
-              - { label: "Theme", name: "theme", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "string" }
               - label: "Sections"
                 name: "sections"
                 widget: "list"
@@ -108,10 +108,12 @@ collections:
                     name: "items"
                     widget: "list"
                     field: { label: "Item", name: "item", widget: "string" }
+          - { label: "Bonuses Headline", name: "bonusesHeadline", widget: "string" }
           - label: "Bonuses"
             name: "bonuses"
             widget: "list"
             fields:
+              - { label: "Icon", name: "icon", widget: "select", options: ["FaRocket", "FaChartLine", "FaRobot"] }
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Description", name: "description", widget: "text" }
 
