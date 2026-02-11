@@ -1,6 +1,8 @@
 {
-  "headline": "Real Results From Real People",
-  "subheadline": "These people are not different from you. They just know something you don't.",
+  "badge": "SUCCESS STORIES",
+  "headline1": "Real Results",
+  "headline2": "From Real People",
+  "description": "These people are **not different from you**. They just know something you don't.",
   "testimonials": [
     {
       "name": "Apple",
@@ -44,5 +46,8 @@
       "quote": "Starting small but **consistent**. Now I understand how to scale this.",
       "image": "https://abovezen.com/wp-content/uploads/2026/01/photo_2026-01-04_21-54-37-768x738.jpg"
     }
-  ]
+  ],
+  "ctaHeadline": "Join 6,000+ Students",
+  "ctaDescription": "Who have **transformed their lives**. Hundreds of them are now millionaires.",
+  "ctaFootnote": "Your turn is next."
 }

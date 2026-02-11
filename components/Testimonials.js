@@ -18,6 +18,7 @@ export default function Testimonials() {
   if (!content) return null
 
   const renderText = (text) => {
+    if (!text) return ''
     const parts = text.split(/(\*\*.*?\*\*)/g)
     return parts.map((part, i) => {
       if (part.startsWith('**') && part.endsWith('**')) {

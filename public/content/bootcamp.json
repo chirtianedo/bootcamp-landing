@@ -2,6 +2,8 @@
   "headline": "What Happens At The Bootcamp",
   "description": "2 Days of practical systems, not theory. Physical event with hands-on training.",
   "day1": {
+    "title": "Day 1 - February 14",
+    "subtitle": "Direction & Clarity",
     "date": "February 14",
     "theme": "Direction & Clarity",
     "sections": [
@@ -25,6 +27,8 @@
     ]
   },
   "day2": {
+    "title": "Day 2 - February 15",
+    "subtitle": "Action Taking & Scaling",
     "date": "February 15",
     "theme": "Action Taking & Scaling",
     "sections": [
@@ -47,20 +51,25 @@
       }
     ]
   },
+  "bonusesHeadline": "Exclusive Bonuses Included",
   "bonuses": [
     {
+      "icon": "FaRocket",
       "title": "Global Income Opportunity List",
       "description": "Curated list of middleman opportunities paying ₦10m to ₦100m yearly without showing your face"
     },
     {
+      "icon": "FaChartLine",
       "title": "Businesses Under ₦200k",
       "description": "Real examples and case studies you can start with minimal capital"
     },
     {
+      "icon": "FaRobot",
       "title": "System Setup Blueprint",
       "description": "One income engine + One traffic source + One automation flow (no overwhelm)"
     },
     {
+      "icon": "FaChartLine",
       "title": "Monetization & Scale Strategy",
       "description": "Turn small wins into consistent income that compounds monthly"
     }
