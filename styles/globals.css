@@ -12,13 +12,32 @@
 
   body {
     @apply bg-dark-900 text-gray-100;
-    color: #e5e7eb;
+  }
+  
+  /* Force text visibility */
+  body, section, div, p, span, h1, h2, h3, h4, h5, h6, li {
+    color: #e5e7eb !important;
+  }
+  
+  .text-white {
+    color: #ffffff !important;
+  }
+  
+  .text-gray-300 {
+    color: #d1d5db !important;
+  }
+  
+  .text-gray-400 {
+    color: #9ca3af !important;
+  }
+  
+  .text-gray-500 {
+    color: #6b7280 !important;
   }
   
   /* Smooth scrolling for sections */
   section {
     scroll-margin-top: 80px;
-    color: #e5e7eb;
   }
 }
 
