@@ -12,20 +12,35 @@
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
   
   <script>
-    // Explicitly check if config.yml is accessible
+    // Debug: Explicitly check config.yml loading
+    console.log('Starting CMS initialization...');
+    
     fetch('/admin/config.yml')
       .then(response => {
-        console.log('Config fetch status:', response.status);
-        if (!response.ok) {
-          console.error('Failed to load config.yml from /admin/config.yml');
-        }
+        console.log('Config fetch response:', {
+          status: response.status,
+          ok: response.ok,
+          headers: Object.fromEntries(response.headers.entries())
+        });
         return response.text();
       })
-      .then(config => {
-        console.log('Config loaded, length:', config.length);
+      .then(configText => {
+        console.log('Config loaded, first 200 chars:', configText.substring(0, 200));
+        console.log('Config file length:', configText.length);
+        
+        // Check if it's actually YAML or HTML
+        if (configText.includes('<!DOCTYPE') || configText.includes('<html')) {
+          console.error('❌ ERROR: config.yml returned HTML instead of YAML!');
+          alert('Config file error: Receiving HTML instead of YAML. Check Netlify redirects.');
+        } else if (!configText.includes('backend:')) {
+          console.error('❌ ERROR: config.yml missing backend property');
+        } else {
+          console.log('✅ Config looks valid');
+        }
       })
       .catch(err => {
-        console.error('Config load error:', err);
+        console.error('❌ Config fetch error:', err);
+        alert('Failed to load config.yml: ' + err.message);
       });
     
     // Netlify Identity widget
